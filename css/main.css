@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+body {
+  background: #02040c;
+  font-family: "SUSE", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-vsr {
+  background: #070f2c !important;
+}
+
+.bg-vsr-subtle {
+  background: #010309 !important;
+}
+
+.player-slot-open .border {
+  color: rgba(255, 255, 255, 0.2);
+  border-style: dashed !important;
+}
+
+.btn-steam:hover {
+  --bs-bg-opacity: .75 !important;
+}
+
+.btn-purple {
+  /* background-color: #6f42c1; */
+  background-color: #633aaf;
+}
+
+.btn-purple-subtle,
+.btn-purple:hover {
+  background-color: rgb(89, 53, 154);
+}
+
+#LiveUpdateButton {
+  margin-top: 6px;
+}
+
+.vsr-cursor-pointer {
+  cursor: pointer;
+}
+
+.border-dotted {
+  border-style: dotted !important;
+}
+
+.btn-dead {
+  pointer-events: none;
+}
+
+.border-hidden-border {
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.text-link {
+  color: rgb(110, 168, 254);
+}
+
+.linked-card:hover li,
+.linked-card:hover div {
+  border-color: rgb(110, 168, 254) !important;
+}
+
+@media (max-width: 767.98px) {
+  .btn-join-copy {
+    border-radius: 4px !important;
+  }
+}
+
+.img-map:hover {
+  filter: brightness(1.25) !important;
+}
+
+/***********************************/
+/********** MAP BROWSER ************/
+/***********************************/
+
+.map-item:hover {
+  cursor: pointer;
+}
+
+.map-item:hover .map-item-title {
+  color: white;
+  background-color: rgb(13, 110, 253) !important;
+}
+
+.map-item:hover .map-image {
+  cursor: pointer;
+  filter: brightness(1.5) !important;
+}
+
+.mv-image {
+  background-color: rgba(22, 23, 25, 1);
+  opacity: 1;
+  background-image: repeating-linear-gradient(45deg, rgba(26, 29, 32, 1) 25%, transparent 25%, transparent 75%, rgba(26, 29, 32, 1) 75%, rgba(26, 29, 32, 1)), repeating-linear-gradient(45deg, rgba(26, 29, 32, 1) 25%, rgba(22, 23, 25, 1) 25%, rgba(22, 23, 25, 1) 75%, rgba(26, 29, 32, 1) 75%, rgba(26, 29, 32, 1));
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
+  background: rgba(173, 181, 189, 0.08);
+  border-radius: 4px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #633aaf;
+}
+
+.dt-scroll-body::-webkit-scrollbar,
+#isdfBuildTree::-webkit-scrollbar,
+#hadeanBuildTree::-webkit-scrollbar,
+#scionBuildTree::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+.dt-scroll-body::-webkit-scrollbar-track,
+#isdfBuildTree::-webkit-scrollbar-track,
+#hadeanBuildTree::-webkit-scrollbar-track,
+#scionBuildTree::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+.dt-scroll-body::-webkit-scrollbar-thumb,
+#isdfBuildTree::-webkit-scrollbar-thumb,
+#hadeanBuildTree::-webkit-scrollbar-thumb,
+#scionBuildTree::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dt-scroll-body::-webkit-scrollbar-thumb:hover,
+#isdfBuildTree::-webkit-scrollbar-thumb:hover,
+#hadeanBuildTree::-webkit-scrollbar-thumb:hover,
+#scionBuildTree::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/***********************************/
+/******** VSR BUTTON GLOW **********/
+/***********************************/
+
+:root {
+  --shiny-cta-bg: #000000;
+  --shiny-cta-bg-subtle: #1a1818;
+  --shiny-cta-fg: #ffffff;
+  --shiny-cta-highlight: blue;
+  --shiny-cta-highlight-subtle: #8484ff;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-angle-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-percent {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+
+@property --gradient-shine {
+  syntax: "<color>";
+  initial-value: white;
+  inherits: false;
+}
+
+.shiny-cta {
+  --animation: gradient-angle linear infinite;
+  --duration: 3s;
+  --shadow-size: 2px;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline-offset: 4px;
+  border: 1px solid transparent;
+  color: var(--shiny-cta-fg);
+  background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box,
+    conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+      transparent,
+      var(--shiny-cta-highlight) var(--gradient-percent),
+      var(--gradient-shine) calc(var(--gradient-percent) * 2),
+      var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+      transparent calc(var(--gradient-percent) * 4)) border-box;
+  box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+
+  &::before,
+  &::after,
+  span::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+  }
+
+  &:active {
+    translate: 0 1px;
+  }
+}
+
+/* Dots pattern */
+.shiny-cta::before {
+  --size: calc(100% - var(--shadow-size) * 3);
+  --position: 2px;
+  --space: calc(var(--position) * 2);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle at var(--position) var(--position),
+      white calc(var(--position) / 4),
+      transparent 0) padding-box;
+  background-size: var(--space) var(--space);
+  background-repeat: space;
+  mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg),
+      black,
+      transparent 10% 90%,
+      black);
+  border-radius: inherit;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Inner shimmer */
+.shiny-cta::after {
+  --animation: shimmer linear infinite;
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(-50deg,
+      transparent,
+      var(--shiny-cta-highlight),
+      transparent);
+  mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+  opacity: 0.6;
+}
+
+.shiny-cta span {
+  z-index: 1;
+
+  &::before {
+    --size: calc(100% + 1rem);
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+    opacity: 0;
+  }
+}
+
+/* Animate */
+.shiny-cta {
+  --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+  transition: var(--transition);
+  transition-property: --gradient-angle-offset, --gradient-percent,
+    --gradient-shine;
+
+  &,
+  &::before,
+  &::after {
+    animation: var(--animation) var(--duration),
+      var(--animation) calc(var(--duration) / 0.4) reverse paused;
+    animation-composition: add;
+  }
+
+  span::before {
+    transition: opacity var(--transition);
+    animation: calc(var(--duration) * 1.5) breathe linear infinite;
+  }
+}
+
+.shiny-cta:is(:hover, :focus-visible) {
+  --gradient-percent: 20%;
+  --gradient-angle-offset: 95deg;
+  --gradient-shine: var(--shiny-cta-highlight-subtle);
+
+  &,
+  &::before,
+  &::after {
+    animation-play-state: running;
+  }
+
+  span::before {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes breathe {
+
+  from,
+  to {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+}
+
+/***********************************/
+/******** VSR BUTTON GLOW **********/
+/***********************************/
+
+#liveIndicator {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
+}
+
+#liveIndicator li {
+  display: block;
+  float: left;
+  width: 6px;
+  height: 6px;
+  margin-right: 20px;
+  border-radius: 100%;
+}
+
+#liveIndicator li {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 182, 0.5),
+    0px 0px 10px 2px rgba(0, 255, 135, 0.3);
+  animation: pulse 1s alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 182, 0.5),
+      0px 0px 5px 2px rgba(0, 255, 135, 0.3);
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 182, 0.5),
+      0px 0px 15px 2px rgba(0, 255, 135, 1);
+  }
+}
+
+th > select, th.dt-type-numeric select {
+  width: 100% !important;
+}
+
+table.table.dataTable>tbody>tr.selected>* {
+    box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, .2) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-link[data-bs-toggle="modal"] {
+    cursor: pointer;
+}
+
+#odfContentContent code {
+    color: #6ea8fe;
+    background: none;
+    padding: 0;
+}
+
+.odf-item.active {
+    background-color: rgba(var(--bs-secondary-rgb), 0.6) !important;
+    border-color: var(--bs-secondary-border-subtle) !important;
+    border-left: 6px solid rgb(13, 110, 253) !important;
+}
+
+
+.odf-item.active .text-secondary {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.odf-item.active .odf-name {
+    font-weight: bold;
+}
+
+.odf-item:hover:not(.active) {
+    background-color: var(--bs-secondary-bg-subtle) !important;
+}
+
+/* Main ODF content container */
+#odfContentContent {
+    padding: 0;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+    padding-right: 4px;
+}
+
+/* Primary outer card structure */
+#odfContentContent > .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed header of primary card */
+#odfContentContent > .card > .card-header {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+}
+
+/* Card body container of primary card - adjust right padding */
+#odfContentContent > .card > .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    padding: 1rem 0.75rem 1rem 1rem; /* Reduced right padding */
+}
+
+/* Keep nav pills fixed */
+#odfContentContent > .card > .card-body > .nav-pills {
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
+
+/* Make tab content scrollable - add left spacing */
+#odfContentContent > .card > .card-body > .tab-content {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+/* When no tabs, make primary card body itself scrollable */
+#odfContentContent > .card > .card-body:not(:has(.tab-content)) {
+    overflow-y: auto;
+}
+
+/* Scrollbar styling for scrollable areas */
+#odfContentContent > .card > .card-body > .tab-content::-webkit-scrollbar,
+#odfContentContent > .card > .card-body:not(:has(.tab-content))::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+#odfContentContent > .card > .card-body > .tab-content::-webkit-scrollbar-track,
+#odfContentContent > .card > .card-body:not(:has(.tab-content))::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+#odfContentContent > .card > .card-body > .tab-content::-webkit-scrollbar-thumb,
+#odfContentContent > .card > .card-body:not(:has(.tab-content))::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#odfContentContent > .card > .card-body > .tab-content::-webkit-scrollbar-thumb:hover,
+#odfContentContent > .card > .card-body:not(:has(.tab-content))::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/* Keep column spacing */
+#odfContentContent .col-6 {
+    padding: 0 0.5rem;
+}
+
+/* Fix card styling in ODF content */
+#odfContentContent .card {
+    border-radius: 0.375rem;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* Adjust row and column spacing */
+#odfContentContent .row {
+    margin: 0;
+}
+
+/* Remove margin from first and last columns */
+#odfContentContent .col-6:first-child {
+    padding-left: 1rem;
+}
+
+#odfContentContent .col-6:last-child {
+    padding-right: 1rem;
+}
+
+/* Make sidebar match content height */
+#odfSidebarContent {
+    padding-right: 0.5rem;
+    height: calc(100vh - 80px);
+}
+
+/* Style sidebar tab content */
+#odfSidebarContent .tab-content {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Sidebar tab content scrollbar styling */
+#odfSidebarContent .tab-content::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+#odfSidebarContent .tab-content::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+#odfSidebarContent .tab-content::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#odfSidebarContent .tab-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/* Add spacing to keyboard shortcut rows */
+#shortcutsModal .table tr td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Style last row cells in ODF content tables */
+#odfContentContent .card .table tr:last-child td {
+    border-bottom: none;
+}
+
+#odfContentContent .card .table tr:last-child td:first-child {
+    border-bottom-left-radius: calc(0.375rem - 1px);
+}
+
+#odfContentContent .card .table tr:last-child td:last-child {
+    border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+/* Search shortcut styling */
+.search-shortcut {
+    position: absolute;
+    right: 155px; /* Adjust based on button widths */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.25rem;
+    pointer-events: none;
+    color: var(--bs-secondary);
+}
+
+.search-shortcut kbd {
+    font-family: system-ui;
+    background: none;
+    border: 1px solid var(--bs-secondary-border-subtle);
+    box-shadow: none;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.75rem;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-shortcut kbd svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* Hide shortcut when input is focused */
+#odfSearch:focus + .search-shortcut {
+    display: none;
+}
+
+/* Update the property search input and clear button styles */
+#odfPropertySearch {
+    border-right: 0;
+}
+
+#clearPropertySearch {
+    border-left: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-color: var(--bs-border-color); /* Match Bootstrap's default border color */
+}
+
+#clearPropertySearch:hover {
+    background: var(--bs-secondary-bg) !important;
+    border-color: var(--bs-border-color);
+}
+
+#clearPropertySearch:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--bs-border-color) !important;
+}
+
+#clearPropertySearch:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--bs-border-color) !important;
+}
+
+#clearPropertySearch svg {
+    opacity: 0.75;
+}
+
+#clearPropertySearch:hover svg {
+    opacity: 1.0;
+}
+
+/* Ensure input group has consistent styling */
+.input-group:has(#odfPropertySearch) {
+    border-radius: var(--bs-border-radius-sm);
+}
+
+.input-group:has(#odfPropertySearch):focus-within #clearPropertySearch {
+    border-color: #86b7fe; /* Match input focus border color */
+}
+
+/* ODF Reference */
+#ODFGuide #sidebar-wrapper {
+    height: calc(100vh - 60px);
+    position: sticky;
+    top: 0;
+}
+
+#ODFGuide #toc-container {
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+
+#ODFGuide #content {
+    height: calc(100vh - 60px);
+}
+
+#ODFGuide .content-scroll {
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+/* Move scrollbar styles from #content to .content-scroll */
+#ODFGuide .content-scroll::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+#ODFGuide .content-scroll::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+#ODFGuide .content-scroll::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#ODFGuide .content-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/* Firefox scrollbar for content-scroll */
+#ODFGuide .content-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13, 110, 253, 0.8) rgba(173, 181, 189, 0.08);
+}
+
+#ODFGuide .code-snippet {
+    position: relative;
+    margin: 1rem 0;
+    border: 1px solid #495057;
+    border-radius: var(--bs-border-radius);
+}
+
+#ODFGuide .code-snippet pre {
+    max-height: none;
+    margin: 0;
+}
+
+#ODFGuide .code-snippet code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 1rem;
+}
+
+#ODFGuide .search-highlight {
+    background-color: rgba(255, 193, 7, 0.3);
+    border-radius: 2px;
+}
+
+#ODFGuide a.text-info:hover {
+    color: #8be3ff !important;
+    text-decoration: underline !important;
+}
+
+#ODFGuide #section-toc {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+}
+
+#ODFGuide .section-toc-item {
+    color: var(--bs-secondary);
+    font-size: 0.875rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid transparent;
+}
+
+#ODFGuide .section-toc-item:hover {
+    color: var(--bs-emphasis-color);
+    border-left-color: var(--bs-secondary);
+}
+
+#ODFGuide .section-toc-item.active {
+    color: var(--bs-emphasis-color);
+    border-left-color: var(--bs-primary);
+}
+
+/* ODF Guide content headers */
+#ODFGuide .card-body > h3:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+/* Scrollbar styles for TOC */
+#ODFGuide #toc-container::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+#ODFGuide #toc-container::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+#ODFGuide #toc-container::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#ODFGuide #toc-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/* Firefox scrollbar for TOC */
+#ODFGuide #toc-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13, 110, 253, 0.8) rgba(173, 181, 189, 0.08);
+}
+
+.odf-item:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Build Tree Styles */
+.build-tree-card {
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.build-tree-card:hover {
+    border-color: var(--bs-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.build-tree-children {
+    position: relative;
+}
+
+.build-tree-children::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.build-tree-node {
+    position: relative;
+}
+
+.build-tree-node::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 20px;
+    width: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Build Tree Scrolling */
+#buildTreeContainer {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13, 110, 253, 0.8) rgba(173, 181, 189, 0.08);
+}
+
+#buildTreeContainer::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+#buildTreeContainer::-webkit-scrollbar-track {
+    background: rgba(173, 181, 189, 0.08);
+    border-radius: 4px;
+}
+
+#buildTreeContainer::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buildTreeContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 1.0);
+}
+
+/* Build Tree Node Collapse */
+.build-tree-card .btn-link svg {
+    transition: transform 0.2s;
+}
+
+.build-tree-card .btn-link.collapsed svg {
+    transform: rotate(0deg);
+}
+
+.build-tree-card .btn-link:not(.collapsed) svg {
+    transform: rotate(180deg);
+}
+
+.build-tree-card .collapse {
+    transition: all 0.2s;
+}
+
+/* Build Tree Node Children Collapse */
+.build-tree-node .btn-link svg {
+    transition: transform 0.2s;
+}
+
+.build-tree-node .btn-link.collapsed svg {
+    transform: rotate(-90deg);
+}
+
+.build-tree-node .btn-link:not(.collapsed) svg {
+    transform: rotate(0deg);
+}
+
+.player-card.list-group-item {
+    border: 1px solid transparent !important;
+    border-bottom: 1px solid var(--bs-border-color) !important;
+}
+
+/* Make last list item match parent card's rounded corners */
+.list-group > .list-group-item:last-child {
+    border-bottom: none !important;
+    border-bottom-left-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+}
+
+/* Center Computer player card in MPI games */
+.list-group:has(.player-card.computer-team:only-child) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    min-height: 80px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding-bottom: 10px !important;
+}
+
+/* Shift Computer player card slightly upward for better visual balance */
+.player-card.computer-team {
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
+    max-width: 100% !important;
+    position: relative !important;
+}
+
+/* Ensure team cards maintain proper structure */
+.card-body:has(.player-card.computer-team) {
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.player-card.list-group-item:hover:not(.no-hover),
+a:hover .player-card.list-group-item:not(.no-hover) {
+    box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.2) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.no-hover:hover {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    border-bottom: 1px solid var(--bs-border-color) !important;
+}
+
+
