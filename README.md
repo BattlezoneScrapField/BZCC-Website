@@ -43,4 +43,10 @@ Website to pull multiplayer game data for [Battlezone: Combat Commander](https:/
 - Map size data provided by [VTrider](https://github.com/VTrider) ([Github](https://github.com/VTrider) | [Steam](https://steamcommunity.com/id/vtrider/)). 🗺️
 - Map scrap loose data provided by [Blue Banana](https://www.twitch.tv/blue_banana_bz2). 📍
 - Honoring the original foundation built by Sev. 💪
-- Game statistics provided by [F9bomber](https://www.youtube.com/@F9bomber) and Battlezone Community. 📊
+- Website maintained by by [F9bomber](https://www.youtube.com/@F9bomber) and Battlezone Community. 📊
+
+## Getting Started [WIP]
+
+clone repo to your local pc
+change useCORSProxy in main.js:line 16 to true
+open index.html using Open with Live Server extension
