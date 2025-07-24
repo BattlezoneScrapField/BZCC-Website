@@ -44,7 +44,7 @@ const ActivePlayerList = [
 ];
 
 // refresh rate in milliseconds, for live updates
-const REFRESH_RATE = 3000; 
+const REFRESH_RATE = 1000 * 30; 
 
 /*-------------------------------------------------*/
 /*------------------- REDIRECTS -------------------*/
@@ -344,7 +344,7 @@ function renderPlayerCard(player, SteamPlayerList, GogPlayerList, compactPlayerC
     let playerName = escapeHtml(player.Name);
     let steamProfileUrl = "#";
     let steamNickname = "";
-    let steamAvatarUrl = player.Name === "Computer" ? "/img/computer.png" : "/img/no_steam_pfp.jpg";
+    let steamAvatarUrl = player.Name === "Computer" ? "/img/computer.png" : (site_root + "img/no_steam_pfp.jpg");
     let playerScore = player.Score !== undefined ? player.Score : "";
 
     // Handle Steam players
@@ -353,7 +353,7 @@ function renderPlayerCard(player, SteamPlayerList, GogPlayerList, compactPlayerC
         if (SteamPlayerList && SteamPlayerList[steamId]) {
             steamProfileUrl = `https://steamcommunity.com/profiles/${steamId}`;
             steamNickname = SteamPlayerList[steamId].Nickname || "";
-            steamAvatarUrl = SteamPlayerList[steamId].AvatarUrl || "/img/no_steam_pfp.jpg";
+            steamAvatarUrl = SteamPlayerList[steamId].AvatarUrl || (site_root + "img/no_steam_pfp.jpg");
         }
     }
     // Handle GOG players
@@ -362,7 +362,7 @@ function renderPlayerCard(player, SteamPlayerList, GogPlayerList, compactPlayerC
         if (GogPlayerList && GogPlayerList[gogId]) {
             steamProfileUrl = `https://www.gog.com/u/${gogId}`;
             steamNickname = GogPlayerList[gogId].Username || "";
-            steamAvatarUrl = GogPlayerList[gogId].AvatarUrl || "/img/no_steam_pfp.jpg";
+            steamAvatarUrl = GogPlayerList[gogId].AvatarUrl || (site_root + "img/no_steam_pfp.jpg");
         }
     }
 
@@ -939,7 +939,7 @@ async function getLobbyData()
                         <div class="container-fluid h-100 pb-1">
                             <div class="row border-bottom">
                                 <div class="col-3 p-1 border-0 border-end border-dotted text-center position-relative z-3">
-                                        <img width="250" length="250" src="${mapImage}" onError="this.src='/img/no_steam_pfp.jpg'" class="img-thumbnail 
+                                        <img width="250" length="250" src="${mapImage}" onError="this.src='${site_root}img/no_steam_pfp.jpg'" class="img-thumbnail 
                                         ${mapVSRObject && isVetStrat 
                                             ? `vsr-cursor-pointer img-map" data-bs-toggle="modal" data-bs-target="#mapModal" 
                                                 data-bs-map-name="${mapVSRObject.Name}" 
