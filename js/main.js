@@ -655,7 +655,7 @@ async function getLobbyData()
                 encodedArgs = stringToHex(plainTextArgs);
 
                 directJoinURL = baseSteamProtocol + encodedArgs;
-
+                /*
                 // we use short.io API to generate a short URL based on game's NAT ID,
                 // which ensures we only generate one join URL per game. also, since
                 // this is asynchronous, I put player counts in the options object
@@ -691,6 +691,13 @@ async function getLobbyData()
                         }
                     })
                     .catch(err => console.error(err));
+                */
+                {
+                    const textareaElement = document.querySelector(`button[data-join-string="${encodedArgs}"] textarea`);
+                    if (textareaElement) {
+                        textareaElement.innerText = `${options.playerCount}/${options.playerCountMax} ${directJoinURL} @BZ2Player`;
+                    }
+                }
             }
 
             // increment our game mod counts
