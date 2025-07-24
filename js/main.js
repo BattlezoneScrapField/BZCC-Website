@@ -446,7 +446,7 @@ async function getLobbyData()
         // let fetchResponse = await fetch('/data/test/slots.sample.json');
 
         // also fetch map data from local JSON file
-        let fetchMapDataResponse = await fetch('/data/maps/vsrmaplist.json');
+        let fetchMapDataResponse = await fetch(site_root + 'data/maps/vsrmaplist.json');
 
         if( !fetchResponse.ok || !fetchMapDataResponse.ok ) {
             console.log(`Error with response. Make sure source and proxy URLs are accessible and returning valid data.`);
