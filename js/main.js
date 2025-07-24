@@ -344,7 +344,7 @@ function renderPlayerCard(player, SteamPlayerList, GogPlayerList, compactPlayerC
     let playerName = escapeHtml(player.Name);
     let steamProfileUrl = "#";
     let steamNickname = "";
-    let steamAvatarUrl = player.Name === "Computer" ? "/img/computer.png" : (site_root + "img/no_steam_pfp.jpg");
+    let steamAvatarUrl = player.Name === "Computer" ? (site_root + "img/computer.png") : (site_root + "img/no_steam_pfp.jpg");
     let playerScore = player.Score !== undefined ? player.Score : "";
 
     // Handle Steam players
@@ -393,7 +393,7 @@ function renderPlayerCard(player, SteamPlayerList, GogPlayerList, compactPlayerC
     let cardContent = `
         <li class="list-group-item d-flex justify-content-between align-items-center${player.Name === "Computer" ? ' no-hover computer-team' : ''} player-card" data-player='${playerData}'>
             <div class="d-flex align-items-center">
-                ${!compactPlayerCards ? `<img src="${steamAvatarUrl}" class="me-2 img-thumbnail" width="48" height="48" onError="this.src='/img/no_steam_pfp.jpg'">` : ''}
+                ${!compactPlayerCards ? `<img src="${steamAvatarUrl}" class="me-2 img-thumbnail" width="48" height="48" onError="this.src='${site_root}img/no_steam_pfp.jpg'">` : ''}
                 <div>
                     <span class="text-light fw-bold">
                         ${isCommanderSlot ? `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-command me-1 mb-1" viewBox="0 0 16 16">
