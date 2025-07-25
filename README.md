@@ -47,6 +47,6 @@ Website to pull multiplayer game data for [Battlezone: Combat Commander](https:/
 
 ## Getting Started [WIP]
 
-clone repo to your local pc
-change useCORSProxy in main.js:line 16 to true
-open index.html using Open with Live Server extension
+- Clone repo to your local pc.
+- Change useCORSProxy in main.js:line 16 to true.
+- Open index.html using Open with Live Server extension.
