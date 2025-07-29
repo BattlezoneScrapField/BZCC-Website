@@ -45,10 +45,11 @@ Here's how you can contribute to this project:
 - Open up `index.html` using the _Open with Live Server_ extension.
 
 ### Pushing Changes
+> Note: the branching process looks like: `your-dev-branch → master → prod`
+
 - Commit your changes to a **new** branch, sourced from `master`. You may call your branch whatever you like (i.e., `"dev-john-cooke"`).
 - Create a **Pull Request** to the `master` branch from your newly developed branch. Make sure to give it an adequate title, description, and label!
-- Now, sit back and relax! 🏖️ 
-- - From here: a code reviewer will review your commits and changes to complete the merge. If your changes look great, your PR to `master` will be approved, which means your new branch `"dev-john-cooke"` will be squashed. A member of the team will create a new PR to merge your changes (that are now in `master`) into `prod`. This will trigger the automated deployment to GitHub Pages!
+- Now, sit back and relax! 🏖️ _From here: a code reviewer will review your commits and changes to complete the merge. If your changes look great, your PR to `master` will be approved, which means your new branch `"dev-john-cooke"` will be squashed. A member of the team will create a new PR to merge your changes (that are now in `master`) into `prod`. This will trigger the automated deployment to GitHub Pages!_
 
 ## Credits 💪
 
