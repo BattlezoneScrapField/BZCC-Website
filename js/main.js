@@ -2,7 +2,7 @@
 /*------------------ GLOBAL VARS ------------------*/
 /*-------------------------------------------------*/
 
-let site_root = "/"; // "/"
+let site_root = "/BZCC-Website/"; // "/"
 
 // used to cancel auto-updates
 let interval_id = null;
