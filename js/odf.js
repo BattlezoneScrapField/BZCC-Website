@@ -2307,7 +2307,7 @@ class ODFBrowser {
                                         <div class="d-flex flex-column h-100">
                                             <div class="d-flex align-items-center" style="padding-bottom: 10px;">
                                                 <h4 class="mb-0">ISDF</h4>
-                                                    <img src="/img/ISDF-Logo.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
+                                                    <img src="/BZCC-Website/img/ISDF-Logo.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
                                             </div>
                                         <div class="flex-grow-1 overflow-auto" id="isdfBuildTree"></div>
                                         </div>
@@ -2316,7 +2316,7 @@ class ODFBrowser {
                                         <div class="d-flex flex-column h-100">
                                             <div class="d-flex align-items-center" style="padding-bottom: 10px;">
                                                 <h4 class="mb-0">Hadean</h4>
-                                                    <img src="/img/Hadean-Logo.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
+                                                    <img src="/BZCC-Website/img/Hadean-Logo.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
                                             </div>
                                             <div class="flex-grow-1 overflow-auto" id="hadeanBuildTree"></div>
                                         </div>
@@ -2325,7 +2325,7 @@ class ODFBrowser {
                                         <div class="d-flex flex-column h-100">
                                             <div class="d-flex align-items-center" style="padding-bottom: 10px;">
                                                 <h4 class="mb-0">Scion</h4>
-                                                    <img src="/img/Scion-Logo2.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
+                                                    <img src="/BZCC-Website/img/Scion-Logo2.png" alt="Image" style="width: 50px; height: 50px; margin-left: 10px;">
                                             </div>
                                             <div class="flex-grow-1 overflow-auto" id="scionBuildTree"></div>
                                         </div>
