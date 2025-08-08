@@ -33,7 +33,7 @@ const truncate = (str, len, end = "...") => {
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // fetch the local map list data
-  fetch("/BZCC-Website/data/maps/vsrmaplist.json")
+  fetch("BZCC-Website/data/maps/vsrmaplist.json")
     .then((response) => response.json())
     .then((MapData) => {
       MapData.forEach((map, index) => {
