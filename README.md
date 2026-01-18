@@ -41,9 +41,30 @@ Website to pull multiplayer game data for [Battlezone: Combat Commander](https:/
 We'd be happy to have you contribute to this project! Here's how you can contribute:
 
 ### Local Environment
-- Clone this repo to your local pc.
-- Change `useCORSProxy` in `main.js:line 16` to **true**.
-- Open up `index.html` using the _Open with Live Server_ extension.
+
+The site uses a `<base>` tag for GitHub Pages, which requires a local web server to work correctly. Opening `index.html` directly via a browser (`file://`) will result in missing CSS and images.
+
+#### Prerequisites
+- **Node.js 18 or newer** (includes `npx`)  
+  Download from [Node.js](https://nodejs.org)
+
+Verify installation:
+```bash
+node -v
+npx -v
+```
+
+#### Running the Site Locally
+```bash
+git clone https://github.com/BattlezoneScrapField/BZCC-Website.git
+cd path/to/BZCC-Website/..
+npx serve .
+```
+You should see output like:
+```bash
+Serving!
+Local: http://localhost:3000
+```
 
 ### Pushing Changes
 > Note: the branching process looks like: `your-dev-branch → master → prod`
@@ -58,4 +79,4 @@ We'd be happy to have you contribute to this project! Here's how you can contrib
 - ODF data provided by [AI_Unit](https://discord.com/users/125055986632228865). 📄
 - Map size data provided by [VTrider](https://github.com/VTrider) ([Github](https://github.com/VTrider) | [Steam](https://steamcommunity.com/id/vtrider/)). 🗺️
 - Map scrap loose data provided by [Blue Banana](https://www.twitch.tv/blue_banana_bz2). 📍
-- Website maintained by [F9bomber](https://www.youtube.com/@F9bomber) and the Battlezone Community. 💖
+- Website maintained by the Battlezone Community. 💖

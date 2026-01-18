@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                         <td>
                             <img class="border border-secondary-subtle border-2 rounded" width="75" height="75px" src="${
                               map.Image
-                            }" onerror="this.src='/img/no_steam_pfp.jpg'" style="filter:brightness(1.5)">
+                            }" onerror="this.src='/BZCC-Website/img/no_steam_pfp.jpg'" style="filter:brightness(1.5)">
                         </td>
                         <td class="fw-bold">${map.Name}</td>
                         <td class="text-center">${map.Size.baseToBase}</td>
@@ -278,7 +278,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                         <div class="mv-image text-center">
                             <img class="border border-secondary-subtle border-2 rounded my-3" width="325" height="325" style="filter:brightness(1.25)" height="auto" src="${
                               map.Image
-                            }" onerror="this.src='/img/no_steam_pfp.jpg'">
+                            }" onerror="this.src='/BZCC-Website/img/no_steam_pfp.jpg'">
                         </div>
                         <div class="mv-body bg-secondary-subtle">
                             <ul class="list-group list-group-flush">
