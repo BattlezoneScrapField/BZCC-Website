@@ -161,7 +161,7 @@ function resetSearch() {
 async function loadSounds() {
   try {
     const response = await fetch(
-      "/BZCC-Websitedata/library/sounds/sounds.json"
+      "/BZCC-Website/data/library/sounds/sounds.json"
     );
     if (!response.ok) throw new Error("Failed to load sounds data");
 
