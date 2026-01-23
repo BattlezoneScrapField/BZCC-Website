@@ -55,7 +55,7 @@ function createAudioCard(soundData) {
         </div>
         <div class="card-body p-3 d-flex align-items-center">
             <audio class="w-100" controls>
-                <source src="/data/library/sounds/${
+                <source src="/BZCC-Website/data/library/sounds/${
                   soundData.file
                 }" type="audio/${soundData.file.split(".").pop()}">
                 Your browser does not support the audio element.
